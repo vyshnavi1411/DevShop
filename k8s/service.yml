@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devshop-service
+  namespace: devshop
+spec:
+  type: ClusterIP
+  selector:
+    app: devshop-backend
+  ports:
+    - port: 80
+      targetPort: 8080

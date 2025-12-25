@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devshop-backend
+  namespace: devshop
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devshop-backend
+  template:
+    metadata:
+      labels:
+        app: devshop-backend
+    spec:
+      containers:
+        - name: devshop-backend
+          image: vyshnavi/devshop-backend:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: NODE_ENV
+              value: "production"

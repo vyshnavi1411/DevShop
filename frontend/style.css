@@ -1,0 +1,196 @@
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.nav-links a {
+  margin-left: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #0a66c2;
+  font-weight: 500;
+}
+
+/* ================= HERO ================= */
+.hero-card {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 50px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6a3fb2, #4b87a5);
+  color: white;
+}
+
+.hero-card h2 {
+  margin-bottom: 10px;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: black;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* ================= PRODUCTS GRID ================= */
+#products {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* ================= PRODUCT CARD ================= */
+.product {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+}
+
+.product img {
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product h3 {
+  margin: 10px 0 5px;
+}
+
+.product p {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product button {
+  margin-top: auto;
+  padding: 10px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background: #004182;
+}
+
+/* ================= CART MODAL ================= */
+.cart-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-box {
+  background: white;
+  width: 340px;
+  padding: 24px;
+  border-radius: 14px;
+}
+
+.cart-box h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#cartTotal {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ================= CART BUTTONS ================= */
+.checkout-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 14px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close-btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  background: #ddd;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= LOGIN ================= */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a3fb2, #4b87a5);
+}
+
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
