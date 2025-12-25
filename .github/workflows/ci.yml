@@ -20,5 +20,6 @@ jobs:
 
     - name: Build & Push Backend Image
       run: |
-        docker build -t vyshnavi/devshop-backend:latest ./backend
-        docker push vyshnavi/devshop-backend:latest
+        docker build -t vyshnavi1411/devshop-backend:latest ./backend
+        docker push vyshnavi1411/devshop-backend:latest
+
