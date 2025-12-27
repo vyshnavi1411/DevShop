@@ -24,12 +24,20 @@ module "eks" {
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
 
+  # 🔥 REQUIRED FIX 🔥
+  cluster_endpoint_public_access  = true
+  cluster_endpoint_private_access = true
+
+  # Safe for learning (lock down later)
+  cluster_endpoint_public_access_cidrs = ["0.0.0.0/0"]
+
   eks_managed_node_groups = {
     devshop_nodes = {
-      desired_size = 2
-      min_size     = 1
-      max_size     = 3
-      instance_types = ["t3.medium"]
+      desired_size   = 2
+      min_size       = 1
+      max_size       = 3
+      instance_types = ["t3.micro"]
     }
   }
 }
+
